@@ -7,6 +7,9 @@
     <meta name="description" content="Discover personalized tax strategies for your business. Take our Treasure Hunt quiz to uncover tax savings opportunities you qualify for.">
     <meta name="keywords" content="tax strategies, QBI deduction, reasonable compensation, business tax planning, tax optimization">
     
+    <!-- Blocks Edit Hints - Help the visual editor understand your content -->
+    <meta name="blocks-edit" content="enabled">
+    
     <!-- Open Graph / Social Media -->
     <meta property="og:title" content="Stratax - Strategic Tax Planning">
     <meta property="og:description" content="Discover personalized tax strategies with our Treasure Hunt tool">
@@ -375,11 +378,17 @@
                 transform: translateY(0);
             }
         }
+        
+        /* Blocks Edit Helpers - Makes elements more editable */
+        [contenteditable="true"] {
+            outline: 2px dashed #00f2fe;
+            outline-offset: 2px;
+        }
     </style>
 </head>
 <body>
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" data-block="hero">
         <div class="hero-content">
             <svg class="logo" viewBox="0 0 300 80" xmlns="http://www.w3.org/2000/svg">
                 <defs>
@@ -422,110 +431,110 @@
                       fill="url(#logoGradient)"
                       letter-spacing="-0.02em">STRATAX</text>
             </svg>
-            <h1>Unlock Hidden Tax Savings for Your Business</h1>
-            <p>Discover personalized tax strategies that could save you thousands. Our expert analysis reveals opportunities you might be missing.</p>
+            <h1 data-editable="text">Unlock Hidden Tax Savings for Your Business</h1>
+            <p data-editable="text">Discover personalized tax strategies that could save you thousands. Our expert analysis reveals opportunities you might be missing.</p>
             
-            <div class="treasure-hunt-cta">
-                <h2><span class="treasure-icon">🏆</span> Tax Strategy Treasure Hunt</h2>
-                <p>Answer a few questions and discover which tax strategies you qualify for. It takes just 5 minutes and could save you thousands.</p>
-                <a href="#treasure-hunt" class="cta-button">Start Your Treasure Hunt →</a>
+            <div class="treasure-hunt-cta" data-block="cta-box">
+                <h2><span class="treasure-icon">🏆</span> <span data-editable="text">Tax Strategy Treasure Hunt</span></h2>
+                <p data-editable="text">Answer a few questions and discover which tax strategies you qualify for. It takes just 5 minutes and could save you thousands.</p>
+                <a href="#treasure-hunt" class="cta-button" data-editable="link">Start Your Treasure Hunt →</a>
             </div>
         </div>
     </section>
 
     <!-- Tax Strategies Section -->
-    <section class="section">
+    <section class="section" data-block="strategies">
         <div class="container">
-            <h2 class="section-title">Proven Tax Strategies for Business Owners</h2>
-            <p style="text-align: center; font-size: 1.2rem; color: #666; max-width: 600px; margin: 0 auto;">We specialize in identifying and implementing tax strategies that reduce your burden while keeping you fully compliant.</p>
+            <h2 class="section-title" data-editable="text">Proven Tax Strategies for Business Owners</h2>
+            <p style="text-align: center; font-size: 1.2rem; color: #666; max-width: 600px; margin: 0 auto;" data-editable="text">We specialize in identifying and implementing tax strategies that reduce your burden while keeping you fully compliant.</p>
             
-            <div class="strategies-grid fade-in">
-                <div class="strategy-card">
-                    <div class="strategy-icon">📊</div>
-                    <h3>QBI Deduction Optimization</h3>
-                    <p>Maximize your Qualified Business Income deduction under Section 199A. We help structure your business to claim up to 20% deduction on qualified income, potentially saving thousands annually.</p>
+            <div class="strategies-grid fade-in" data-repeater="strategy">
+                <div class="strategy-card" data-repeater-item>
+                    <div class="strategy-icon" data-editable="emoji">📊</div>
+                    <h3 data-editable="text">QBI Deduction Optimization</h3>
+                    <p data-editable="text">Maximize your Qualified Business Income deduction under Section 199A. We help structure your business to claim up to 20% deduction on qualified income, potentially saving thousands annually.</p>
                 </div>
                 
-                <div class="strategy-card">
-                    <div class="strategy-icon">💼</div>
-                    <h3>Reasonable Compensation Strategy</h3>
-                    <p>Find the optimal balance for S-Corp owners between salary and distributions. Proper compensation planning can significantly reduce self-employment taxes while maintaining IRS compliance.</p>
+                <div class="strategy-card" data-repeater-item>
+                    <div class="strategy-icon" data-editable="emoji">💼</div>
+                    <h3 data-editable="text">Reasonable Compensation Strategy</h3>
+                    <p data-editable="text">Find the optimal balance for S-Corp owners between salary and distributions. Proper compensation planning can significantly reduce self-employment taxes while maintaining IRS compliance.</p>
                 </div>
                 
-                <div class="strategy-card">
-                    <div class="strategy-icon">🏢</div>
-                    <h3>Business Structure Optimization</h3>
-                    <p>Evaluate whether your current entity type is tax-efficient. Converting to an S-Corp, LLC, or other structure could provide substantial annual savings based on your situation.</p>
+                <div class="strategy-card" data-repeater-item>
+                    <div class="strategy-icon" data-editable="emoji">🏢</div>
+                    <h3 data-editable="text">Business Structure Optimization</h3>
+                    <p data-editable="text">Evaluate whether your current entity type is tax-efficient. Converting to an S-Corp, LLC, or other structure could provide substantial annual savings based on your situation.</p>
                 </div>
                 
-                <div class="strategy-card">
-                    <div class="strategy-icon">📱</div>
-                    <h3>Equipment & Technology Deductions</h3>
-                    <p>Accelerate depreciation through bonus depreciation and Section 179 deductions. Turn necessary business purchases into immediate tax savings.</p>
+                <div class="strategy-card" data-repeater-item>
+                    <div class="strategy-icon" data-editable="emoji">📱</div>
+                    <h3 data-editable="text">Equipment & Technology Deductions</h3>
+                    <p data-editable="text">Accelerate depreciation through bonus depreciation and Section 179 deductions. Turn necessary business purchases into immediate tax savings.</p>
                 </div>
                 
-                <div class="strategy-card">
-                    <div class="strategy-icon">🚗</div>
-                    <h3>Vehicle & Travel Optimization</h3>
-                    <p>Maximize deductions for business use of vehicles, travel expenses, and home office deductions. Proper documentation and strategy can unlock significant savings.</p>
+                <div class="strategy-card" data-repeater-item>
+                    <div class="strategy-icon" data-editable="emoji">🚗</div>
+                    <h3 data-editable="text">Vehicle & Travel Optimization</h3>
+                    <p data-editable="text">Maximize deductions for business use of vehicles, travel expenses, and home office deductions. Proper documentation and strategy can unlock significant savings.</p>
                 </div>
                 
-                <div class="strategy-card">
-                    <div class="strategy-icon">💡</div>
-                    <h3>R&D and Innovation Credits</h3>
-                    <p>Claim research and development credits for software development, product innovation, and process improvements. Many businesses qualify without realizing it.</p>
+                <div class="strategy-card" data-repeater-item>
+                    <div class="strategy-icon" data-editable="emoji">💡</div>
+                    <h3 data-editable="text">R&D and Innovation Credits</h3>
+                    <p data-editable="text">Claim research and development credits for software development, product innovation, and process improvements. Many businesses qualify without realizing it.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Why Choose Stratax -->
-    <section class="section why-choose">
+    <section class="section why-choose" data-block="benefits">
         <div class="container">
-            <h2 class="section-title">Why Business Owners Choose Stratax</h2>
+            <h2 class="section-title" data-editable="text">Why Business Owners Choose Stratax</h2>
             
-            <div class="benefits-grid fade-in">
-                <div class="benefit-item">
-                    <div class="benefit-icon">🎯</div>
-                    <h3>Personalized Analysis</h3>
-                    <p>Every business is unique. Our Treasure Hunt tool analyzes your specific situation to recommend strategies that actually apply to you.</p>
+            <div class="benefits-grid fade-in" data-repeater="benefit">
+                <div class="benefit-item" data-repeater-item>
+                    <div class="benefit-icon" data-editable="emoji">🎯</div>
+                    <h3 data-editable="text">Personalized Analysis</h3>
+                    <p data-editable="text">Every business is unique. Our Treasure Hunt tool analyzes your specific situation to recommend strategies that actually apply to you.</p>
                 </div>
                 
-                <div class="benefit-item">
-                    <div class="benefit-icon">⚡</div>
-                    <h3>Quick Discovery</h3>
-                    <p>In just minutes, discover tax strategies that could take hours of research to find. Our streamlined process gets you answers fast.</p>
+                <div class="benefit-item" data-repeater-item>
+                    <div class="benefit-icon" data-editable="emoji">⚡</div>
+                    <h3 data-editable="text">Quick Discovery</h3>
+                    <p data-editable="text">In just minutes, discover tax strategies that could take hours of research to find. Our streamlined process gets you answers fast.</p>
                 </div>
                 
-                <div class="benefit-item">
-                    <div class="benefit-icon">🛡️</div>
-                    <h3>Compliance Focused</h3>
-                    <p>All strategies are IRS-compliant and backed by tax code. We help you save money the right way, with proper documentation and support.</p>
+                <div class="benefit-item" data-repeater-item>
+                    <div class="benefit-icon" data-editable="emoji">🛡️</div>
+                    <h3 data-editable="text">Compliance Focused</h3>
+                    <p data-editable="text">All strategies are IRS-compliant and backed by tax code. We help you save money the right way, with proper documentation and support.</p>
                 </div>
                 
-                <div class="benefit-item">
-                    <div class="benefit-icon">📈</div>
-                    <h3>Proven Results</h3>
-                    <p>Our clients typically save thousands annually through strategic tax planning. See what opportunities you might be missing.</p>
+                <div class="benefit-item" data-repeater-item>
+                    <div class="benefit-icon" data-editable="emoji">📈</div>
+                    <h3 data-editable="text">Proven Results</h3>
+                    <p data-editable="text">Our clients typically save thousands annually through strategic tax planning. See what opportunities you might be missing.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Final CTA -->
-    <section class="final-cta" id="treasure-hunt">
+    <section class="final-cta" id="treasure-hunt" data-block="final-cta">
         <div class="container">
-            <h2>Ready to Discover Your Tax Savings?</h2>
-            <p>Join thousands of business owners who have uncovered hidden tax strategies with our Treasure Hunt tool.</p>
-            <a href="https://example-jotform-link.com" class="cta-button">Start Your Treasure Hunt Now →</a>
-            <p style="font-size: 0.9rem; margin-top: 20px; opacity: 0.7;">Takes 5 minutes • Immediate results • No obligations</p>
+            <h2 data-editable="text">Ready to Discover Your Tax Savings?</h2>
+            <p data-editable="text">Join thousands of business owners who have uncovered hidden tax strategies with our Treasure Hunt tool.</p>
+            <a href="https://example-jotform-link.com" class="cta-button" data-editable="link">Start Your Treasure Hunt Now →</a>
+            <p style="font-size: 0.9rem; margin-top: 20px; opacity: 0.7;" data-editable="text">Takes 5 minutes • Immediate results • No obligations</p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" data-block="footer">
         <div class="container">
-            <p>&copy; 2025 Stratax. All rights reserved. | Professional tax strategy consulting for business owners.</p>
+            <p data-editable="text">&copy; 2025 Stratax. All rights reserved. | Professional tax strategy consulting for business owners.</p>
         </div>
     </footer>
 
