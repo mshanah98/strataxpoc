@@ -1,0 +1,72 @@
+{
+  "hero": {
+    "title": "Unlock Hidden Tax Savings for Your Business",
+    "subtitle": "Discover personalized tax strategies that could save you thousands. Our expert analysis reveals opportunities you might be missing.",
+    "treasureHunt": {
+      "title": "Tax Strategy Treasure Hunt",
+      "description": "Answer a few questions and discover which tax strategies you qualify for. It takes just 5 minutes and could save you thousands.",
+      "buttonText": "Start Your Treasure Hunt →",
+      "buttonLink": "https://example-jotform-link.com"
+    }
+  },
+  "strategies": [
+    {
+      "icon": "📊",
+      "title": "QBI Deduction Optimization",
+      "description": "Maximize your Qualified Business Income deduction under Section 199A. We help structure your business to claim up to 20% deduction on qualified income, potentially saving thousands annually."
+    },
+    {
+      "icon": "💼",
+      "title": "Reasonable Compensation Strategy",
+      "description": "Find the optimal balance for S-Corp owners between salary and distributions. Proper compensation planning can significantly reduce self-employment taxes while maintaining IRS compliance."
+    },
+    {
+      "icon": "🏢",
+      "title": "Business Structure Optimization",
+      "description": "Evaluate whether your current entity type is tax-efficient. Converting to an S-Corp, LLC, or other structure could provide substantial annual savings based on your situation."
+    },
+    {
+      "icon": "📱",
+      "title": "Equipment & Technology Deductions",
+      "description": "Accelerate depreciation through bonus depreciation and Section 179 deductions. Turn necessary business purchases into immediate tax savings."
+    },
+    {
+      "icon": "🚗",
+      "title": "Vehicle & Travel Optimization",
+      "description": "Maximize deductions for business use of vehicles, travel expenses, and home office deductions. Proper documentation and strategy can unlock significant savings."
+    },
+    {
+      "icon": "💡",
+      "title": "R&D and Innovation Credits",
+      "description": "Claim research and development credits for software development, product innovation, and process improvements. Many businesses qualify without realizing it."
+    }
+  ],
+  "benefits": [
+    {
+      "icon": "🎯",
+      "title": "Personalized Analysis",
+      "description": "Every business is unique. Our Treasure Hunt tool analyzes your specific situation to recommend strategies that actually apply to you."
+    },
+    {
+      "icon": "⚡",
+      "title": "Quick Discovery",
+      "description": "In just minutes, discover tax strategies that could take hours of research to find. Our streamlined process gets you answers fast."
+    },
+    {
+      "icon": "🛡️",
+      "title": "Compliance Focused",
+      "description": "All strategies are IRS-compliant and backed by tax code. We help you save money the right way, with proper documentation and support."
+    },
+    {
+      "icon": "📈",
+      "title": "Proven Results",
+      "description": "Our clients typically save thousands annually through strategic tax planning. See what opportunities you might be missing."
+    }
+  ],
+  "finalCta": {
+    "heading": "Ready to Discover Your Tax Savings?",
+    "subheading": "Join thousands of business owners who have uncovered hidden tax strategies with our Treasure Hunt tool.",
+    "buttonText": "Start Your Treasure Hunt Now →",
+    "buttonLink": "https://example-jotform-link.com"
+  }
+}

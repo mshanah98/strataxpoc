@@ -1,0 +1,23 @@
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Editor directories and files
+.idea
+.vscode
+*.swp
+*.swo
+
+# Tina Cloud
+.tina/__generated__
+.env
+.env.local
+
+# If you use any build tools later
+node_modules/
+dist/
+build/
+
+# Temporary files
+*.tmp
+*.temp

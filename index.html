@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stratax - Maximize Your Tax Savings with Strategic Planning</title>
+    <meta name="description" content="Discover personalized tax strategies for your business. Take our Treasure Hunt quiz to uncover tax savings opportunities you qualify for.">
+    <meta name="keywords" content="tax strategies, QBI deduction, reasonable compensation, business tax planning, tax optimization">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Stratax - Strategic Tax Planning">
+    <meta property="og:description" content="Discover personalized tax strategies with our Treasure Hunt tool">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://stratax.com">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Geist', 'Space Grotesk', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: #0a0a0a;
+            overflow-x: hidden;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+            color: white;
+            padding: 120px 20px 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(0, 242, 254, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(255, 59, 100, 0.1) 0%, transparent 50%);
+            opacity: 0.8;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .logo {
+            width: 240px;
+            height: 60px;
+            margin: 0 auto 2rem;
+            display: block;
+        }
+        
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.05;
+            letter-spacing: -0.025em;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+            font-weight: 400;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Treasure Hunt CTA */
+        .treasure-hunt-cta {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 48px;
+            margin: 50px auto;
+            max-width: 650px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .treasure-hunt-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(0, 242, 254, 0.1) 0%, rgba(255, 59, 100, 0.1) 100%);
+            border-radius: 24px;
+        }
+        
+        .treasure-hunt-cta > * {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .treasure-hunt-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #00f2fe 0%, #ff3b64 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            letter-spacing: -0.02em;
+        }
+        
+        .treasure-icon {
+            font-size: 2.8rem;
+        }
+        
+        .cta-button {
+            background: linear-gradient(135deg, #00f2fe 0%, #ff3b64 100%);
+            color: white;
+            padding: 20px 48px;
+            border: none;
+            border-radius: 100px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 24px;
+            box-shadow: 0 8px 32px rgba(0, 242, 254, 0.3);
+            letter-spacing: -0.01em;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 12px 40px rgba(0, 242, 254, 0.4);
+            background: linear-gradient(135deg, #ff3b64 0%, #00f2fe 100%);
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Sections */
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.75rem;
+            font-weight: 800;
+            margin-bottom: 3rem;
+            color: #0a0a0a;
+            letter-spacing: -0.025em;
+            line-height: 1.1;
+        }
+        
+        /* Tax Strategies Grid */
+        .strategies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .strategy-card {
+            background: white;
+            padding: 40px 32px;
+            border-radius: 20px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(0,0,0,0.04);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .strategy-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #00f2fe, #ff3b64);
+        }
+        
+        .strategy-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+            border-color: rgba(0, 242, 254, 0.2);
+        }
+        
+        .strategy-icon {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, #00f2fe 0%, #ff3b64 100%);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            color: white;
+            margin-bottom: 24px;
+        }
+        
+        .strategy-card h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #0a0a0a;
+            letter-spacing: -0.01em;
+        }
+        
+        .strategy-card p {
+            color: #525252;
+            line-height: 1.7;
+            font-weight: 400;
+        }
+        
+        /* Why Choose Section */
+        .why-choose {
+            background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .benefit-item {
+            text-align: center;
+            padding: 32px 24px;
+        }
+        
+        .benefit-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #00f2fe 0%, #ff3b64 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            margin: 0 auto 24px;
+        }
+        
+        .benefit-item h3 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #0a0a0a;
+            letter-spacing: -0.01em;
+        }
+        
+        .benefit-item p {
+            color: #525252;
+            line-height: 1.6;
+            font-weight: 400;
+        }
+        
+        /* CTA Section */
+        .final-cta {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        
+        .final-cta h2 {
+            font-size: 2.75rem;
+            font-weight: 800;
+            margin-bottom: 24px;
+            letter-spacing: -0.025em;
+            line-height: 1.1;
+        }
+        
+        .final-cta p {
+            font-size: 1.25rem;
+            margin-bottom: 48px;
+            opacity: 0.9;
+            font-weight: 400;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #0a0a0a;
+            color: white;
+            text-align: center;
+            padding: 48px 20px;
+        }
+        
+        .footer p {
+            opacity: 0.7;
+            font-weight: 400;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .logo {
+                font-size: 2rem;
+            }
+            
+            .treasure-hunt-cta {
+                padding: 30px 20px;
+                margin: 30px 20px;
+            }
+            
+            .treasure-hunt-cta h2 {
+                font-size: 1.8rem;
+            }
+            
+            .strategies-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .section {
+                padding: 60px 0;
+            }
+        }
+        
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Loading animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <svg class="logo" viewBox="0 0 300 80" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:#00f2fe;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#ff3b64;stop-opacity:1" />
+                    </linearGradient>
+                    <linearGradient id="globeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#00f2fe;stop-opacity:1" />
+                        <stop offset="50%" style="stop-color:#0094ff;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#ff3b64;stop-opacity:1" />
+                    </linearGradient>
+                    <filter id="glow">
+                        <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+                        <feMerge> 
+                            <feMergeNode in="coloredBlur"/>
+                            <feMergeNode in="SourceGraphic"/>
+                        </feMerge>
+                    </filter>
+                </defs>
+                <g transform="translate(20, 15)">
+                    <path d="M 0 25 A 25 25 0 0 1 50 25 A 25 25 0 0 1 0 25 L 25 50 Z" 
+                          fill="url(#globeGradient)" 
+                          filter="url(#glow)"/>
+                    <g stroke="rgba(255,255,255,0.3)" stroke-width="1" fill="none">
+                        <ellipse cx="25" cy="25" rx="25" ry="8" opacity="0.6"/>
+                        <ellipse cx="25" cy="25" rx="25" ry="16" opacity="0.4"/>
+                        <path d="M 25 0 Q 15 25 25 50" opacity="0.6"/>
+                        <path d="M 25 0 Q 35 25 25 50" opacity="0.6"/>
+                        <path d="M 25 0 L 25 50" opacity="0.8"/>
+                        <path d="M 0 25 Q 12.5 15 25 0 Q 37.5 15 50 25" opacity="0.5"/>
+                        <path d="M 0 25 Q 12.5 35 25 50 Q 37.5 35 50 25" opacity="0.5"/>
+                    </g>
+                    <ellipse cx="18" cy="18" rx="8" ry="6" fill="rgba(255,255,255,0.2)" opacity="0.8"/>
+                </g>
+                <text x="90" y="55" 
+                      font-family="'Geist', 'Space Grotesk', system-ui, sans-serif" 
+                      font-size="36" 
+                      font-weight="900" 
+                      fill="url(#logoGradient)"
+                      letter-spacing="-0.02em">STRATAX</text>
+            </svg>
+            <h1>Unlock Hidden Tax Savings for Your Business</h1>
+            <p>Discover personalized tax strategies that could save you thousands. Our expert analysis reveals opportunities you might be missing.</p>
+            
+            <div class="treasure-hunt-cta">
+                <h2><span class="treasure-icon">🏆</span> Tax Strategy Treasure Hunt</h2>
+                <p>Answer a few questions and discover which tax strategies you qualify for. It takes just 5 minutes and could save you thousands.</p>
+                <a href="#treasure-hunt" class="cta-button">Start Your Treasure Hunt →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tax Strategies Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Proven Tax Strategies for Business Owners</h2>
+            <p style="text-align: center; font-size: 1.2rem; color: #666; max-width: 600px; margin: 0 auto;">We specialize in identifying and implementing tax strategies that reduce your burden while keeping you fully compliant.</p>
+            
+            <div class="strategies-grid fade-in">
+                <div class="strategy-card">
+                    <div class="strategy-icon">📊</div>
+                    <h3>QBI Deduction Optimization</h3>
+                    <p>Maximize your Qualified Business Income deduction under Section 199A. We help structure your business to claim up to 20% deduction on qualified income, potentially saving thousands annually.</p>
+                </div>
+                
+                <div class="strategy-card">
+                    <div class="strategy-icon">💼</div>
+                    <h3>Reasonable Compensation Strategy</h3>
+                    <p>Find the optimal balance for S-Corp owners between salary and distributions. Proper compensation planning can significantly reduce self-employment taxes while maintaining IRS compliance.</p>
+                </div>
+                
+                <div class="strategy-card">
+                    <div class="strategy-icon">🏢</div>
+                    <h3>Business Structure Optimization</h3>
+                    <p>Evaluate whether your current entity type is tax-efficient. Converting to an S-Corp, LLC, or other structure could provide substantial annual savings based on your situation.</p>
+                </div>
+                
+                <div class="strategy-card">
+                    <div class="strategy-icon">📱</div>
+                    <h3>Equipment & Technology Deductions</h3>
+                    <p>Accelerate depreciation through bonus depreciation and Section 179 deductions. Turn necessary business purchases into immediate tax savings.</p>
+                </div>
+                
+                <div class="strategy-card">
+                    <div class="strategy-icon">🚗</div>
+                    <h3>Vehicle & Travel Optimization</h3>
+                    <p>Maximize deductions for business use of vehicles, travel expenses, and home office deductions. Proper documentation and strategy can unlock significant savings.</p>
+                </div>
+                
+                <div class="strategy-card">
+                    <div class="strategy-icon">💡</div>
+                    <h3>R&D and Innovation Credits</h3>
+                    <p>Claim research and development credits for software development, product innovation, and process improvements. Many businesses qualify without realizing it.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Stratax -->
+    <section class="section why-choose">
+        <div class="container">
+            <h2 class="section-title">Why Business Owners Choose Stratax</h2>
+            
+            <div class="benefits-grid fade-in">
+                <div class="benefit-item">
+                    <div class="benefit-icon">🎯</div>
+                    <h3>Personalized Analysis</h3>
+                    <p>Every business is unique. Our Treasure Hunt tool analyzes your specific situation to recommend strategies that actually apply to you.</p>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-icon">⚡</div>
+                    <h3>Quick Discovery</h3>
+                    <p>In just minutes, discover tax strategies that could take hours of research to find. Our streamlined process gets you answers fast.</p>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-icon">🛡️</div>
+                    <h3>Compliance Focused</h3>
+                    <p>All strategies are IRS-compliant and backed by tax code. We help you save money the right way, with proper documentation and support.</p>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-icon">📈</div>
+                    <h3>Proven Results</h3>
+                    <p>Our clients typically save thousands annually through strategic tax planning. See what opportunities you might be missing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta" id="treasure-hunt">
+        <div class="container">
+            <h2>Ready to Discover Your Tax Savings?</h2>
+            <p>Join thousands of business owners who have uncovered hidden tax strategies with our Treasure Hunt tool.</p>
+            <a href="https://example-jotform-link.com" class="cta-button">Start Your Treasure Hunt Now →</a>
+            <p style="font-size: 0.9rem; margin-top: 20px; opacity: 0.7;">Takes 5 minutes • Immediate results • No obligations</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Stratax. All rights reserved. | Professional tax strategy consulting for business owners.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationDelay = '0.2s';
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all strategy cards
+        document.querySelectorAll('.strategy-card, .benefit-item').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Google Analytics placeholder (replace with actual GA4 code)
+        console.log('Google Analytics would be initialized here');
+        
+        // Track Treasure Hunt clicks
+        document.querySelectorAll('a[href*="treasure-hunt"], a[href*="jotform"]').forEach(link => {
+            link.addEventListener('click', function() {
+                // Replace with actual GA4 event tracking
+                console.log('Treasure Hunt CTA clicked');
+                // gtag('event', 'treasure_hunt_click', { event_category: 'engagement' });
+            });
+        });
+    </script>
+</body>
+</html>
