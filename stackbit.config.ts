@@ -10,7 +10,7 @@ export default defineStackbitConfig({
       type: 'git',
       models: [
         {
-          name: 'site_content',
+          name: 'page_content',
           type: 'data',
           filePath: 'content.json',
           fields: [
@@ -40,12 +40,5 @@ export default defineStackbitConfig({
         }
       ]
     }
-  ],
-  siteMap: ({ documents, models }) => {
-    return [{
-      stableId: 'homepage',
-      urlPath: '/',
-      document: documents.find(doc => doc.filePath === 'index.html')
-    }];
-  }
+  ]
 });
