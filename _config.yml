@@ -1,0 +1,18 @@
+title: Stratax
+description: Strategic Tax Planning for Business Owners
+url: https://strataxpoc.netlify.app
+baseurl: ""
+
+markdown: kramdown
+highlighter: rouge
+
+collections:
+  strategies:
+    output: false
+  benefits:
+    output: false
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
