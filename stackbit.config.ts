@@ -10,17 +10,23 @@ export default defineStackbitConfig({
       type: 'git',
       models: [
         {
-          name: 'site_config',
+          name: 'site_content',
           type: 'data',
-          filePath: 'site-config.json',
+          filePath: 'content.json',
           fields: [
-            { name: 'company_name', type: 'string', required: true },
             { name: 'hero_headline', type: 'string', required: true },
             { name: 'hero_subtitle', type: 'text' },
+            { name: 'cta_title', type: 'string' },
+            { name: 'cta_description', type: 'text' },
             { name: 'cta_button_text', type: 'string' },
-            { name: 'cta_button_url', type: 'string' },
-            { name: 'phone', type: 'string' },
-            { name: 'email', type: 'string' }
+            { name: 'strategies_title', type: 'string' },
+            { name: 'strategies_subtitle', type: 'text' },
+            { name: 'benefits_title', type: 'string' },
+            { name: 'final_cta_title', type: 'string' },
+            { name: 'final_cta_subtitle', type: 'text' },
+            { name: 'final_cta_button', type: 'string' },
+            { name: 'disclaimer', type: 'string' },
+            { name: 'footer_text', type: 'string' }
           ]
         },
         {
@@ -34,5 +40,12 @@ export default defineStackbitConfig({
         }
       ]
     }
-  ]
+  ],
+  siteMap: ({ documents, models }) => {
+    return [{
+      stableId: 'homepage',
+      urlPath: '/',
+      document: documents.find(doc => doc.filePath === 'index.html')
+    }];
+  }
 });
