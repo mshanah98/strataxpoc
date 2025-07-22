@@ -14,9 +14,9 @@ export default defineStackbitConfig({
         {
           name: "SiteContent",
           type: "data",
-          filePath: "content.json",
+          filePath: "./content.json",
           fields: [
-            { name: "hero_headline", type: "string", required: true },
+            { name: "hero_headline", type: "string" },
             { name: "hero_subtitle", type: "text" },
             { name: "cta_title", type: "string" },
             { name: "cta_description", type: "text" },
@@ -35,12 +35,21 @@ export default defineStackbitConfig({
           name: "Homepage",
           type: "page",
           urlPath: "/",
-          filePath: "index.html",
+          filePath: "./index.html",
           fields: [
-            { name: "title", type: "string", required: true }
+            { name: "title", type: "string" }
           ]
         }
       ]
     })
-  ]
+  ],
+  siteMap: ({ documents }) => {
+    return [
+      {
+        stableId: "homepage",
+        urlPath: "/",
+        document: documents.find(doc => doc.modelName === "Homepage")
+      }
+    ];
+  }
 });
